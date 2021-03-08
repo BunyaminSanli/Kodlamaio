@@ -7,8 +7,15 @@ namespace Kodlamaio
         static void Main(string[] args)
         {
             Musteri musteri = new Musteri();
+            MusteriManager manager = new MusteriManager();
+
             musteri.SetId(5);
-            Console.WriteLine(musteri.GetId());
+            musteri.SetAd("Bünyamin");
+            musteri.SetSoyad("Şanlı");
+            musteri.SetCinsiyet('E');
+            musteri.SetAdres("Gaziantep");
+
+            manager.MusteriListele(musteri);
         }
     }
 }
